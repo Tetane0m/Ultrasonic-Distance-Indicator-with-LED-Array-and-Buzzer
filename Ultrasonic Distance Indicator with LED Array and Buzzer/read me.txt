@@ -1,0 +1,48 @@
+Array and Buzzer
+Description
+This Arduino project uses an HC-SR04 ultrasonic sensor to measure the distance to an object and visually represents this distance using an array of 8 LEDs. Additionally, a buzzer is used to alert when the object is within a close proximity, specifically when the last three LEDs are activated. This project can be useful for applications such as obstacle detection, proximity alerts, and educational demonstrations of sensor integration.
+
+Components Needed
+Arduino board
+HC-SR04 Ultrasonic Sensor
+8 LEDs
+8 Resistors (220Ω each)
+Buzzer
+Breadboard and jumper wires
+Circuit Diagram
+Ultrasonic Sensor:
+VCC to 5V
+GND to GND
+TRIG to digital pin 10
+ECHO to digital pin 11
+LEDs:
+Connect each LED to digital pins 2 to 9 via a resistor (220Ω each).
+Buzzer:
+Connect the positive terminal of the buzzer to digital pin 13 and the negative terminal to GND.
+Code Explanation
+Setup:
+Define Pins: TRIG, ECHO, and BUZZER pins, as well as an array of LED pins.
+Initialize Pins: Set up the pins as inputs or outputs.
+Loop:
+Trigger Ultrasonic Sensor: Send a pulse from the TRIG pin and measure the duration of the echo received on the ECHO pin.
+Calculate Distance: Convert the duration to a distance in centimeters.
+Map Distance to LEDs: Use a function to determine how many LEDs should be lit based on the distance.
+Control LEDs: Light up the LEDs according to the distance.
+Control Buzzer: Turn on the buzzer when the distance indicates that the last three LEDs should be on.
+Distance Mapping:
+A switch statement is used to map different distance ranges to the number of LEDs that should be lit. Distances closer to the sensor will light up more LEDs and potentially activate the buzzer if within a critical range.
+Installation
+Connect the components according to the circuit diagram.
+Upload the code to your Arduino board using the Arduino IDE.
+Usage
+Power up your Arduino.
+The LEDs will light up corresponding to the distance of an object detected by the ultrasonic sensor.
+The buzzer will sound when the object is within a close range, indicated by the last three LEDs being lit.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Contributions
+Contributions are welcome! Please feel free to submit issues or pull requests to improve this project.
+
+Link to the project on the Tinker card website : https://www.tinkercad.com/things/4nKq7bpEz7c-stunning-vihelmo-allis/editel?sharecode=8nbs3B1CN8NYlZEsv1G0sBkstnQgmCAVb5JUuv973HQ
